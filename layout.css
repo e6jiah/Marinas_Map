@@ -1,0 +1,52 @@
+body {
+  background-image: url("data/images/water.png");
+  background-repeat: repeat;
+  background-position: right top;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.col_1 {width: 10%;}
+.col_2 {width: 20%;}
+.col_3 {width: 30%;}
+.col_4 {width: 40%;}
+.col_5 {width: 50%;}
+.col_6 {width: 60%;}
+.col_7 {width: 70%;}
+.col_8 {width: 80%;}
+.col_9 {width: 90%;}
+.col_10 {width: 100%;}
+
+[class*="col_"] {
+  float: left;
+  padding: 15px;
+  margin: 0px;
+}
+
+[class*="row"]::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h1 {
+	text-align: center;
+	padding: 32px;
+}
+
+#marina_info {
+	text-align:center;
+	font-size: 18px;
+	overflow:hidden;
+}
+
+#map {
+	height: 512px;
+}
+
+#main_container{
+	display: flex;
+}
