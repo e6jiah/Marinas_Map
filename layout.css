@@ -37,16 +37,32 @@ h1 {
 	padding: 32px;
 }
 
-#marina_info {
-	text-align:center;
-	font-size: 18px;
-	overflow:hidden;
+#marina_info{
+	text-align: center;
+	color: black;
 }
 
 #map {
-	height: 512px;
+	height: 700px;
+}
+
+img{
+	width: 600px;
+	height: auto;
 }
 
 #main_container{
 	display: flex;
+}
+
+@media only screen and (max-width: 970px){
+	img {
+	width: 400px;
+	height: auto;
+}
+
+@media only screen and (max-width: 712px){
+	img {
+	width: 250px;
+	height: auto;
 }

@@ -7,6 +7,8 @@ function myMap() {
 	var map = new google.maps.Map(document.getElementById("map"),centerOfIreland);
 	var markers = [];
 	
+	var infowindow = new google.maps.InfoWindow();
+	
 	var xhr = new XMLHttpRequest();
 	
 	xhr.onload = function(){
@@ -27,8 +29,9 @@ function myMap() {
 					setMarkersIcons();
 					this.setIcon(null);
 					
-					document.getElementById('heading').innerHTML = this.name;
-					document.getElementById('marina_info').innerHTML = '<p><b>Latitude: ' + this.getPosition().lat() + '<br>Longtitude: ' + this.getPosition().lng() + '</b></p><img src="' + this.imgPath + '" >';
+					infowindow.setContent('<div id="marina_info"><p><b>' + this.name + '</b></p><p>Latitude: ' + this.getPosition().lat() + 
+											'<br>Longtitude: ' + this.getPosition().lng() + '</p><img src="' + this.imgPath + '" ></div>');
+					infowindow.open(map, this);
 				});
 				
 				markers.push(marker);
